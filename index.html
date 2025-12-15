@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NurulAdibah · Student Bento Grid</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f7f9fb;
+      --card: #ffffff;
+      --border: #e5e7eb;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      /* Deep Ocean Blue (UMT-inspired) */
+      --accent: #0a4da2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      padding: 24px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: minmax(120px, auto);
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h2,
+    .card h3 {
+      margin: 0 0 8px 0;
+      font-weight: 600;
+    }
+
+    .tagline {
+      margin-top: 8px;
+      font-style: italic;
+      color: var(--accent);
+      font-size: 0.95rem;
+    }
+
+    .muted {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Grid placement */
+    .profile {
+      grid-column: span 6;
+      grid-row: span 2;
+    }
+
+    .location {
+      grid-column: span 3;
+    }
+
+    .hobby {
+      grid-column: span 3;
+    }
+
+    .tech {
+      grid-column: span 4;
+    }
+
+    .case-study {
+      grid-column: span 4;
+    }
+
+    .playlist {
+      grid-column: span 12;
+      min-height: 140px;
+    }
+
+    .links a {
+      margin-right: 12px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .profile,
+      .location,
+      .hobby,
+      .tech,
+      .case-study,
+      .playlist {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Card 1: Profile -->
+    <div class="card profile">
+      <div>
+        <h2>NURULADIBAH</h2>
+        <p class="muted">Food Technology · Year 1</p>
+        <p class="tagline">“Love innovating food.”</p>
+      </div>
+      <div class="links">
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">UMT Portal</a>
+      </div>
+    </div>
+
+    <!-- Card 2: Location -->
+    <div class="card location">
+      <div>
+        <h3>Location</h3>
+        <p class="muted">UMT, Kuala Nerus</p>
+      </div>
+      <p class="muted">Terengganu, Malaysia</p>
+    </div>
+
+    <!-- Card 5: Hobby -->
+    <div class="card hobby">
+      <div>
+        <h3>Hobby</h3>
+        <p class="muted">Morning walks at Pantai Tok Jemba</p>
+      </div>
+    </div>
+
+    <!-- Card 3: Subjects -->
+    <div class="card tech">
+      <h3>Subjects</h3>
+      <p class="muted">
+        Organic Chemistry<br>
+        Biochemistry<br>
+        Lab Analysis
+      </p>
+    </div>
+
+    <!-- Card 4: Case Study -->
+    <div class="card case-study">
+      <div>
+        <h3>Food colouring from natural extract</h3>
+        <p class="muted">
+          Analyzing food colouring extract
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6: Playlist -->
+    <div class="card playlist">
+      <h3>Study Playlist</h3>
+      <p class="muted">Music player placeholder · Calm ocean vibes / Lo-fi</p>
+    </div>
+  </div>
+</body>
+</html>
