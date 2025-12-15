@@ -48,6 +48,37 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+.profile {
+  position: relative;
+  background-image: url('bg.jpg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.profile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 77, 162, 0.65); /* Ocean blue overlay */
+  z-index: 0;
+}
+
+.profile > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+    /* Subtle hover zoom */
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
     }
 
     .card h2,
@@ -82,6 +113,10 @@
       grid-column: span 3;
     }
 
+    .reflection {
+      grid-column: span 3;
+    }
+
     .tech {
       grid-column: span 4;
     }
@@ -112,6 +147,7 @@
       .profile,
       .location,
       .hobby,
+      .reflection,
       .tech,
       .case-study,
       .playlist {
@@ -130,9 +166,9 @@
         <p class="tagline">“Love innovating food.”</p>
       </div>
       <div class="links">
-        <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
-        <a href="#">UMT Portal</a>
+        <a href="a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+        <a href="a href="https://github.com/adibahsaad" target="_blank">GitHub</a>
+        <a href="#" target="_blank">UMT Portal</a>
       </div>
     </div>
 
@@ -153,6 +189,17 @@
       </div>
     </div>
 
+    <!-- Card 7: Reflection -->
+    <div class="card reflection">
+      <div>
+        <h3>Why Food Tech Matters in Malaysia</h3>
+        <p class="muted">
+          Sustainable food security is crucial for our future. By optimizing local
+          processing methods, we can reduce waste and improve nutrition.
+        </p>
+      </div>
+    </div>
+
     <!-- Card 3: Subjects -->
     <div class="card tech">
       <h3>Subjects</h3>
@@ -167,15 +214,14 @@
     <div class="card case-study">
       <div>
         <h3>Food colouring from natural extract</h3>
-        <p class="muted">
-          Analyzing food colouring extract
-        </p>
+        <p class="muted">Analyzing food colouring extract</p>
       </div>
     </div>
 
     <!-- Card 6: Playlist -->
     <div class="card playlist">
       <h3>Study Playlist</h3>
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1CPZ5BxNNd0n0nF4Orb9JS?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       <p class="muted">Music player placeholder · Calm ocean vibes / Lo-fi</p>
     </div>
   </div>
