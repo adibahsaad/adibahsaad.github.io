@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NurulAdibah · Student Bento Grid</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -51,29 +50,28 @@
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-.profile {
-  position: relative;
-  background-image: url('bg.jpg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ffffff;
-  overflow: hidden;
-}
+    .profile {
+      position: relative;
+      background-image: url('bg.jpg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #ffffff;
+      overflow: hidden;
+    }
 
-.profile::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(10, 77, 162, 0.65); /* Ocean blue overlay */
-  z-index: 0;
-}
+    .profile::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 77, 162, 0.65); /* Ocean blue overlay */
+      z-index: 0;
+    }
 
-.profile > * {
-  position: relative;
-  z-index: 1;
-}
-
+    .profile > * {
+      position: relative;
+      z-index: 1;
+    }
 
     /* Subtle hover zoom */
     .card:hover {
@@ -97,6 +95,24 @@
     .muted {
       color: var(--text-muted);
       font-size: 0.9rem;
+    }
+
+    /* New Button Style for the Focus App */
+    .app-button {
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: opacity 0.2s;
+    }
+
+    .app-button:hover {
+      opacity: 0.9;
     }
 
     /* Grid placement */
@@ -125,6 +141,11 @@
       grid-column: span 4;
     }
 
+    /* Placement for the new tool card */
+    .tool-link {
+      grid-column: span 4;
+    }
+
     .playlist {
       grid-column: span 12;
       min-height: 140px;
@@ -150,6 +171,7 @@
       .reflection,
       .tech,
       .case-study,
+      .tool-link,
       .playlist {
         grid-column: span 1;
       }
@@ -158,7 +180,6 @@
 </head>
 <body>
   <div class="container">
-    <!-- Card 1: Profile -->
     <div class="card profile">
       <div>
         <h2>NURULADIBAH</h2>
@@ -166,13 +187,12 @@
         <p class="tagline">“Love innovating food.”</p>
       </div>
       <div class="links">
-        <a href="a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-        <a href="a href="https://github.com/adibahsaad" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+        <a href="https://github.com/adibahsaad" target="_blank">GitHub</a>
         <a href="#" target="_blank">UMT Portal</a>
       </div>
     </div>
 
-    <!-- Card 2: Location -->
     <div class="card location">
       <div>
         <h3>Location</h3>
@@ -181,7 +201,6 @@
       <p class="muted">Terengganu, Malaysia</p>
     </div>
 
-    <!-- Card 5: Hobby -->
     <div class="card hobby">
       <div>
         <h3>Hobby</h3>
@@ -189,7 +208,6 @@
       </div>
     </div>
 
-    <!-- Card 7: Reflection -->
     <div class="card reflection">
       <div>
         <h3>Why Food Tech Matters in Malaysia</h3>
@@ -200,7 +218,6 @@
       </div>
     </div>
 
-    <!-- Card 3: Subjects -->
     <div class="card tech">
       <h3>Subjects</h3>
       <p class="muted">
@@ -210,7 +227,6 @@
       </p>
     </div>
 
-    <!-- Card 4: Case Study -->
     <div class="card case-study">
       <div>
         <h3>Food colouring from natural extract</h3>
@@ -218,10 +234,17 @@
       </div>
     </div>
 
-    <!-- Card 6: Playlist -->
+    <div class="card tool-link">
+      <div>
+        <h3>Focus Companion</h3>
+        <p class="muted">Boost your productivity with a cozy study buddy.</p>
+      </div>
+      <a href="app.html" class="app-button">Launch Focus App</a>
+    </div>
+
     <div class="card playlist">
       <h3>Study Playlist</h3>
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1CPZ5BxNNd0n0nF4Orb9JS?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1CPZ5BxNNd0n0nF4Orb9JS?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       <p class="muted">Music player placeholder · Calm ocean vibes / Lo-fi</p>
     </div>
   </div>
